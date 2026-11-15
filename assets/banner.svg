@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 370">
+  <defs>
+    <style>
+      .blink       { animation: blink 1s step-end infinite; }
+      .pulse-dot   { animation: pulseDot 1.6s ease-in-out infinite; }
+      .pulse-dot2  { animation: pulseDot 1.6s ease-in-out infinite 0.5s; }
+      .flow-line   { stroke-dasharray: 6 4; animation: flowDash 1s linear infinite; }
+      .flow-line2  { stroke-dasharray: 6 4; animation: flowDash 1s linear infinite 0.4s; }
+      .float-gear  { animation: floatY 3.8s ease-in-out infinite; }
+      .bar1  { animation: barPop 2.4s ease-in-out infinite; }
+      .bar2  { animation: barPop 2.4s ease-in-out infinite 0.2s; }
+      .bar3  { animation: barPop 2.4s ease-in-out infinite 0.4s; }
+      .bar4  { animation: barPop 2.4s ease-in-out infinite 0.6s; }
+      .bar5  { animation: barPop 2.4s ease-in-out infinite 0.8s; }
+      .bar6  { animation: barPop 2.4s ease-in-out infinite 1.0s; }
+      .bar7  { animation: barPop 2.4s ease-in-out infinite 1.2s; }
+      .bar8  { animation: barPop 2.4s ease-in-out infinite 1.4s; }
+      .progress-fill { animation: progressFill 3s ease-in-out infinite; }
+      .hand-l { animation: typeL 0.5s ease-in-out infinite alternate; transform-origin: 385px 232px; }
+      .hand-r { animation: typeR 0.5s ease-in-out infinite alternate; transform-origin: 468px 238px; }
+      .float-code  { animation: floatCode 4.2s ease-in-out infinite; }
+      .float-code2 { animation: floatCode 4.2s ease-in-out infinite 1.4s; }
+      .float-code3 { animation: floatCode 4.2s ease-in-out infinite 2.7s; }
+
+      @keyframes blink       { 0%,100%{opacity:1} 50%{opacity:0} }
+      @keyframes pulseDot    { 0%,100%{r:2.5;opacity:0.85} 50%{r:4;opacity:1} }
+      @keyframes flowDash    { to{stroke-dashoffset:-20} }
+      @keyframes floatY      { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+      @keyframes barPop      { 0%,100%{opacity:0.75;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.08)} }
+      @keyframes progressFill{ 0%{width:0} 60%{width:148px} 90%{width:148px} 100%{width:0} }
+      @keyframes typeL       { from{transform:translateY(0)} to{transform:translateY(-2.5px)} }
+      @keyframes typeR       { from{transform:translateY(0)} to{transform:translateY(-2px) rotate(2deg)} }
+      @keyframes floatCode   { 0%,100%{transform:translateY(0);opacity:0.4} 50%{transform:translateY(-8px);opacity:0.65} }
+    </style>
+
+    <linearGradient id="deskG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#243548"/>
+      <stop offset="100%" stop-color="#131c2a"/>
+    </linearGradient>
+    <linearGradient id="chairG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#243548"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Floor shadow -->
+  <ellipse cx="278" cy="358" rx="218" ry="11" fill="#060c18" opacity="0.55"/>
+
+
+  <!-- ── Gear / Settings panel (top-center, like reference) ── -->
+  <g class="float-gear">
+    <rect x="308" y="10" width="50" height="50" rx="9" fill="#0d1e40" stroke="#3b82f6" stroke-width="1.5" opacity="0.92"/>
+    <!-- Outer gear ring -->
+    <circle cx="333" cy="35" r="11" fill="none" stroke="#3b82f6" stroke-width="2.8"/>
+    <circle cx="333" cy="35" r="4.5" fill="#3b82f6"/>
+    <!-- Gear teeth 8-point -->
+    <rect x="330.5" y="20"  width="5" height="6" rx="1.2" fill="#3b82f6"/>
+    <rect x="330.5" y="44"  width="5" height="6" rx="1.2" fill="#3b82f6"/>
+    <rect x="344"   y="32.5" width="6" height="5" rx="1.2" fill="#3b82f6"/>
+    <rect x="319"   y="32.5" width="6" height="5" rx="1.2" fill="#3b82f6"/>
+    <rect x="341.5" y="21.5" width="5" height="5" rx="1.2" fill="#3b82f6" transform="rotate(45,344,24)"/>
+    <rect x="320"   y="21.5" width="5" height="5" rx="1.2" fill="#3b82f6" transform="rotate(-45,322,24)"/>
+    <rect x="341.5" y="43.5" width="5" height="5" rx="1.2" fill="#3b82f6" transform="rotate(-45,344,46)"/>
+    <rect x="320"   y="43.5" width="5" height="5" rx="1.2" fill="#3b82f6" transform="rotate(45,322,46)"/>
+    <!-- Small second gear (like reference) -->
+    <circle cx="350" cy="22" r="6"   fill="none" stroke="#8b5cf6" stroke-width="1.8" opacity="0.75"/>
+    <circle cx="350" cy="22" r="2.5" fill="#8b5cf6" opacity="0.75"/>
+  </g>
+  <!-- Dotted connector from gear to right monitor -->
+  <line x1="333" y1="60" x2="333" y2="100" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3" opacity="0.3"/>
+
+  <!-- ── Desk ── -->
+  <path d="M30 260 L530 260 L538 276 L22 276 Z" fill="url(#deskG)"/>
+  <line x1="30" y1="260" x2="530" y2="260" stroke="#3b82f6" stroke-width="0.8" opacity="0.4"/>
+  <rect x="46"  y="276" width="12" height="80" rx="2" fill="#0f172a"/>
+  <rect x="502" y="276" width="12" height="80" rx="2" fill="#0f172a"/>
+  <line x1="52" y1="338" x2="508" y2="338" stroke="#0f172a" stroke-width="4"/>
+
+  <!-- ── Left monitor ── -->
+  <rect x="124" y="245" width="10" height="17" fill="#1e293b"/>
+  <rect x="108" y="261" width="42"  height="4" rx="2" fill="#1e293b"/>
+  <rect x="48"  y="122" width="182" height="140" rx="6" fill="#0f172a" stroke="#2d4a7a" stroke-width="1.8"/>
+  <rect x="54"  y="128" width="170" height="128" rx="4" fill="#030b1a"/>
+  <!-- Header -->
+  <rect x="54"  y="128" width="170" height="13" rx="4" fill="#0d1e40"/>
+  <circle cx="62"  cy="134" r="2"   fill="#ef4444"/>
+  <circle cx="69"  cy="134" r="2"   fill="#f59e0b"/>
+  <circle cx="76"  cy="134" r="2"   fill="#22c55e" class="pulse-dot"/>
+  <text x="84" y="138" font-size="5.5" fill="#60a5fa" font-family="monospace" font-weight="bold">ANALYTICS DASHBOARD</text>
+  <!-- Code lines -->
+  <rect x="59" y="146" width="84"  height="3" rx="1" fill="#1e3a5f"/>
+  <rect x="59" y="153" width="118" height="3" rx="1" fill="#3b82f6" opacity="0.5"/>
+  <rect x="59" y="160" width="64"  height="3" rx="1" fill="#8b5cf6" opacity="0.55"/>
+  <rect x="59" y="167" width="100" height="3" rx="1" fill="#1e3a5f"/>
+  <rect x="59" y="174" width="76"  height="3" rx="1" fill="#3b82f6" opacity="0.4"/>
+  <rect x="59" y="181" width="124" height="3" rx="1" fill="#1e3a5f"/>
+  <rect x="59" y="188" width="52"  height="3" rx="1" fill="#22c55e" opacity="0.5"/>
+  <rect x="59" y="195" width="92"  height="3" rx="1" fill="#1e3a5f"/>
+  <!-- Cursor blink -->
+  <rect x="59" y="202" width="5" height="7" rx="0.5" fill="#3b82f6" opacity="0.8" class="blink"/>
+  <!-- Bar chart -->
+  <g style="transform-box:fill-box">
+    <rect x="59"  y="215" width="10" height="25" rx="1" fill="#3b82f6" class="bar1" style="transform-origin:59px  240px"/>
+    <rect x="71"  y="208" width="10" height="32" rx="1" fill="#3b82f6" class="bar2" style="transform-origin:71px  240px"/>
+    <rect x="83"  y="220" width="10" height="20" rx="1" fill="#8b5cf6" class="bar3" style="transform-origin:83px  240px"/>
+    <rect x="95"  y="205" width="10" height="35" rx="1" fill="#3b82f6" class="bar4" style="transform-origin:95px  240px"/>
+    <rect x="107" y="212" width="10" height="28" rx="1" fill="#8b5cf6" class="bar5" style="transform-origin:107px 240px"/>
+    <rect x="119" y="200" width="10" height="40" rx="1" fill="#3b82f6" class="bar6" style="transform-origin:119px 240px"/>
+    <rect x="131" y="210" width="10" height="30" rx="1" fill="#3b82f6" class="bar7" style="transform-origin:131px 240px"/>
+    <rect x="143" y="218" width="10" height="22" rx="1" fill="#8b5cf6" class="bar8" style="transform-origin:143px 240px"/>
+    <rect x="155" y="204" width="10" height="36" rx="1" fill="#3b82f6" class="bar1" style="transform-origin:155px 240px"/>
+    <rect x="167" y="211" width="10" height="29" rx="1" fill="#8b5cf6" class="bar2" style="transform-origin:167px 240px"/>
+    <rect x="179" y="207" width="10" height="33" rx="1" fill="#3b82f6" class="bar3" style="transform-origin:179px 240px"/>
+    <rect x="191" y="215" width="10" height="25" rx="1" fill="#3b82f6" class="bar4" style="transform-origin:191px 240px"/>
+    <rect x="203" y="209" width="10" height="31" rx="1" fill="#8b5cf6" class="bar5" style="transform-origin:203px 240px"/>
+  </g>
+
+  <!-- ── Right monitor (Pipeline Monitor) ── -->
+  <rect x="317" y="241" width="12" height="21" fill="#1e293b"/>
+  <rect x="299" y="261" width="48"  height="4" rx="2" fill="#1e293b"/>
+  <rect x="236" y="96"  width="206" height="166" rx="6" fill="#0f172a" stroke="#4a2d8a" stroke-width="1.8"/>
+  <rect x="242" y="102" width="194" height="154" rx="4" fill="#030b1a"/>
+  <!-- Header -->
+  <rect x="242" y="102" width="194" height="13" rx="4" fill="#130e2e"/>
+  <circle cx="250" cy="108" r="2"   fill="#ef4444"/>
+  <circle cx="257" cy="108" r="2"   fill="#f59e0b"/>
+  <circle cx="264" cy="108" r="2"   fill="#22c55e" class="pulse-dot2"/>
+  <text x="272" y="112" font-size="5.5" fill="#a78bfa" font-family="monospace" font-weight="bold">PIPELINE MONITOR</text>
+  <text x="394" y="112" font-size="5.5" fill="#22c55e" font-family="monospace" class="blink">● LIVE</text>
+  <!-- Pipeline nodes -->
+  <rect x="247" y="121" width="40" height="17" rx="4" fill="#0f2040" stroke="#3b82f6" stroke-width="1"/>
+  <text x="249" y="132" font-size="5.5" fill="#60a5fa" font-family="monospace">MongoDB</text>
+  <line x1="287" y1="129" x2="302" y2="129" stroke="#3b82f6" stroke-width="1.5" class="flow-line"/>
+  <polygon points="302,126 307,129 302,132" fill="#3b82f6"/>
+  <rect x="308" y="121" width="33" height="17" rx="4" fill="#1a0f30" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="313" y="132" font-size="5.5" fill="#a78bfa" font-family="monospace">Bronze</text>
+  <line x1="341" y1="129" x2="356" y2="129" stroke="#8b5cf6" stroke-width="1.5" class="flow-line2"/>
+  <polygon points="356,126 361,129 356,132" fill="#8b5cf6"/>
+  <rect x="362" y="121" width="30" height="17" rx="4" fill="#1a0f30" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="366" y="132" font-size="5.5" fill="#a78bfa" font-family="monospace">Silver</text>
+  <line x1="392" y1="129" x2="406" y2="129" stroke="#8b5cf6" stroke-width="1.5" class="flow-line"/>
+  <polygon points="406,126 411,129 406,132" fill="#8b5cf6"/>
+  <rect x="412" y="121" width="18" height="17" rx="4" fill="#0d2e1e" stroke="#22c55e" stroke-width="1"/>
+  <text x="414" y="132" font-size="5.5" fill="#4ade80" font-family="monospace">Au</text>
+  <!-- Status lines -->
+  <line x1="247" y1="145" x2="427" y2="145" stroke="#1e293b" stroke-width="0.8"/>
+  <text x="247" y="155" font-size="5"   fill="#22c55e" font-family="monospace">&#x25B6; STATUS: RUNNING</text>
+  <text x="247" y="165" font-size="5"   fill="#60a5fa" font-family="monospace">  rows processed : 1,247,832</text>
+  <text x="247" y="175" font-size="5"   fill="#60a5fa" font-family="monospace">  load time      : 2.3s &#x2193; 8%</text>
+  <text x="247" y="185" font-size="5"   fill="#a78bfa" font-family="monospace">  quality score  : 99.2%</text>
+  <text x="247" y="195" font-size="5"   fill="#60a5fa" font-family="monospace">  destination    : BigQuery</text>
+  <text x="380" y="195" font-size="6"   fill="#3b82f6" font-family="monospace" class="blink">&#x2588;</text>
+  <line x1="247" y1="202" x2="427" y2="202" stroke="#1e293b" stroke-width="0.8"/>
+  <text x="247" y="212" font-size="5"   fill="#f59e0b" font-family="monospace">&#x25C8; BigQuery   &#xB7; connected</text>
+  <text x="247" y="222" font-size="5"   fill="#f59e0b" font-family="monospace">&#x25C8; MS Fabric  &#xB7; connected</text>
+  <text x="247" y="232" font-size="5"   fill="#22c55e" font-family="monospace">&#x25CF; GCP CI/CD  &#xB7; deployed</text>
+  <!-- Progress bar -->
+  <rect x="247" y="240" width="162" height="4" rx="2" fill="#1e293b"/>
+  <rect x="247" y="240" width="0"   height="4" rx="2" fill="#3b82f6" class="progress-fill"/>
+
+  <!-- ── Office Chair ── -->
+  <!-- Back -->
+  <rect x="447" y="168" width="60" height="90" rx="9" fill="url(#chairG)" stroke="#334155" stroke-width="1.5"/>
+  <rect x="457" y="178" width="40"  height="5" rx="2" fill="#334155" opacity="0.55"/>
+  <rect x="457" y="189" width="40"  height="2" rx="1" fill="#334155" opacity="0.35"/>
+  <rect x="457" y="196" width="40"  height="2" rx="1" fill="#334155" opacity="0.25"/>
+  <!-- Armrests -->
+  <rect x="435" y="224" width="13" height="34" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="506" y="224" width="13" height="34" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <!-- Seat -->
+  <rect x="430" y="254" width="100" height="28" rx="8" fill="url(#chairG)" stroke="#334155" stroke-width="1.5"/>
+  <!-- Stem -->
+  <rect x="472" y="282" width="14"  height="42" rx="3" fill="#0f172a"/>
+  <!-- 5-star base -->
+  <line x1="479" y1="324" x2="443" y2="348" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="479" y1="324" x2="479" y2="352" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="479" y1="324" x2="515" y2="348" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="479" y1="324" x2="452" y2="328" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="479" y1="324" x2="506" y2="328" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- Wheels -->
+  <circle cx="443" cy="351" r="5.5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="479" cy="355" r="5.5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="515" cy="351" r="5.5" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+
+  <!-- ── Character ── -->
+  <!-- Pants -->
+  <path d="M426 265 Q421 302 419 345 L436 345 Q438 304 442 277 Q447 277 451 277 Q455 304 453 345 L472 345 Q474 302 470 265Z" fill="#1e293b"/>
+  <!-- Shoes -->
+  <ellipse cx="425" cy="348" rx="14" ry="5.5" fill="#1c1917"/>
+  <ellipse cx="464" cy="349" rx="14" ry="5.5" fill="#1c1917"/>
+  <!-- Body / hoodie -->
+  <path d="M420 196 Q409 229 407 265 L483 265 Q481 229 470 196 Q457 183 446 182 Q435 183 420 196Z" fill="#1d4ed8"/>
+  <path d="M420 196 Q412 229 410 265 L426 265 Q424 229 427 202Z" fill="#1e40af" opacity="0.35"/>
+  <path d="M470 196 Q478 229 480 265 L464 265 Q466 229 465 202Z" fill="#1e40af" opacity="0.35"/>
+  <!-- Collar / neck join -->
+  <path d="M434 184 Q446 192 458 184 Q454 175 446 173 Q438 175 434 184Z" fill="#1e40af"/>
+  <!-- Left arm (reaches toward keyboard) -->
+  <g class="hand-l">
+    <path d="M420 204 Q400 220 385 233 Q377 241 382 249 Q391 255 399 246 Q413 230 424 215Z" fill="#1d4ed8"/>
+    <ellipse cx="380" cy="249" rx="8" ry="6" fill="#fbbf24" transform="rotate(-15,380,249)"/>
+  </g>
+  <!-- Right arm -->
+  <g class="hand-r">
+    <path d="M468 202 Q480 217 490 230 Q497 239 492 246 Q483 252 476 243 Q466 228 462 214Z" fill="#1d4ed8"/>
+    <ellipse cx="494" cy="245" rx="8" ry="6" fill="#fbbf24" transform="rotate(15,494,245)"/>
+  </g>
+  <!-- Neck -->
+  <rect x="440" y="172" width="12" height="13" rx="4" fill="#fbbf24"/>
+  <!-- Head -->
+  <ellipse cx="447" cy="156" rx="22" ry="24" fill="#fbbf24" transform="rotate(6,447,156)"/>
+  <!-- Hair -->
+  <path d="M426 145 Q428 120 447 118 Q466 120 468 145 Q462 132 447 130 Q432 132 426 145Z" fill="#1c1917"/>
+  <ellipse cx="427" cy="150" rx="5.5" ry="9"   fill="#1c1917" opacity="0.9"/>
+  <ellipse cx="467" cy="150" rx="5.5" ry="8.5" fill="#1c1917" opacity="0.85"/>
+  <!-- Headphones -->
+  <path d="M427 145 Q419 156 421 167" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <rect x="418" y="165" width="9" height="14" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <path d="M467 145 Q475 156 473 167" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <rect x="467" y="165" width="9"  height="14" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <path d="M427 145 Q447 133 467 145" fill="none" stroke="#334155" stroke-width="2.5"/>
+  <!-- Glasses -->
+  <rect x="433" y="150" width="13" height="9" rx="4" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="449" y="150" width="13" height="9" rx="4" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="446" y1="154" x2="449" y2="154" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="433" y1="154" x2="429" y2="152" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="462" y1="154" x2="466" y2="152" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="433" y="150" width="13" height="9" rx="4" fill="#93c5fd" opacity="0.08"/>
+  <rect x="449" y="150" width="13" height="9" rx="4" fill="#93c5fd" opacity="0.08"/>
+  <!-- Eyes -->
+  <circle cx="440" cy="155" r="2"   fill="#1c1917"/>
+  <circle cx="455" cy="155" r="2"   fill="#1c1917"/>
+  <circle cx="441" cy="154" r="0.7" fill="white"/>
+  <circle cx="456" cy="154" r="0.7" fill="white"/>
+  <!-- Brows -->
+  <path d="M435 148 L441 147" stroke="#c97d4e" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M450 147 L456 148" stroke="#c97d4e" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Smile -->
+  <path d="M438 167 Q446 170 453 167" fill="none" stroke="#c97d4e" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Ears -->
+  <ellipse cx="425" cy="158" rx="4"   ry="5.5" fill="#fbbf24"/>
+  <ellipse cx="469" cy="158" rx="4"   ry="5.5" fill="#fbbf24"/>
+  <!-- Screen glow on face -->
+  <rect x="405" y="148" width="90" height="75" rx="10" fill="#3b82f6" opacity="0.04"/>
+
+  <!-- ── Keyboard ── -->
+  <rect x="336" y="248" width="120" height="14" rx="3" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <rect x="341" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="350" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="359" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="368" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="377" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="386" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="395" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="404" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="413" y="251" width="7" height="4" rx="1" fill="#0a0f1e"/>
+  <rect x="341" y="257" width="106" height="3" rx="1" fill="#0a0f1e"/>
+</svg>

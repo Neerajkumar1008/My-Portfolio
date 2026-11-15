@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neeraj Kumar | Data Engineer & BI Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"  id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Stars background -->
+  <canvas id="starsCanvas"></canvas>
+
+  <!-- ── Navbar ───────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">NK<span class="logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────── -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-greeting">// Hello, world. I'm</p>
+        <h1 class="hero-name">Neeraj Kumar</h1>
+        <div class="hero-role">
+          <span class="typed-text" id="typedText"></span><span class="cursor-blink">_</span>
+        </div>
+        <p class="hero-desc">
+          Building scalable data pipelines, BI solutions &amp; analytics architectures
+          that turn raw data into decisions — for enterprises across India &amp; the USA.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact"  class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/neeraj-kumar-78927036a" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+          <span class="social-sep">/</span>
+          <a href="https://github.com/Neerajshah1008" target="_blank" rel="noopener" class="social-link">GitHub</a>
+          <span class="social-sep">/</span>
+          <a href="https://www.hackerrank.com/profile/neerajshah_work" target="_blank" rel="noopener" class="social-link">HackerRank</a>
+          <span class="social-sep">/</span>
+        </div>
+      </div>
+      <div class="hero-banner">
+        <img src="assets/banner.svg" alt="Data Engineer in spaceship cockpit" class="banner-img"/>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ── About ─────────────────────────────────── -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">About Me</h2>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <div class="photo-frame">
+            <img src="assets/IMG_20241014_213633-removebg-preview.png" alt="Neeraj Kumar" class="photo-img">
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>Data Engineer &amp; BI Developer</strong> based in Bengaluru, India,
+            currently at <strong>Basal Analytics</strong> — where I build end-to-end data
+            solutions covering ingestion, transformation, and loading, designed to power
+            scalable and high-performance BI systems for enterprise clients.
+          </p>
+          <p>
+            I design and implement robust ETL/ELT pipelines, leverage <strong>medallion
+            architecture</strong> (Bronze/Silver/Gold), and deliver production-grade dashboards
+            on <strong>Power BI, Tableau &amp; Looker Studio</strong>. I've worked with clients
+            including Aligned Global Marketing, <a href="https://www.ecanet.com/" target="_blank" rel="noopener">Equipment Corporation of America</a>,
+            <a href="https://ndgcs.com/" target="_blank" rel="noopener">ND Global Consultancy</a>, and <a href="https://queenofthethrones.com/" target="_blank" rel="noopener">Queen of the Thrones</a>.
+          </p>
+          <p>
+            My stack spans <strong>Google Cloud Platform</strong> (GCS, BigQuery, Cloud
+            Functions), <strong>Microsoft Fabric</strong>, <strong>Azure</strong>,
+            <strong>SQL &amp; Python</strong> — with a strong focus on
+            data quality checks, lineage tracking, and automated CI/CD pipelines. I've also
+            built CI/CD-driven integrations across platforms like <strong>Shopify</strong>,
+            <strong>ShipBob</strong>, <strong>MongoDB</strong>, <strong>TikTok</strong>
+            &amp; <strong>ShipStation</strong> for seamless, scalable data workflows.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Enterprise Clients</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span><span class="stat-plus"></span>
+              <span class="stat-label">Active Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ────────────────────────────────── -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Skills &amp; Tools</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🐍</div>
+          <h3>Programming &amp; Analytics</h3>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">EDA</span>
+            <span class="tag">Google Colab</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">⚙️</div>
+          <h3>Data Engineering</h3>
+          <div class="tags">
+            <span class="tag">ETL / ELT</span>
+            <span class="tag">Microsoft Fabric</span>
+            <span class="tag">BigQuery</span>
+            <span class="tag">Snowflake</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Medallion Architecture</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">📊</div>
+          <h3>BI &amp; Visualisation</h3>
+          <div class="tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Looker Studio</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">☁️</div>
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="tags">
+            <span class="tag">GCP</span>
+            <span class="tag">Azure</span>
+            <span class="tag">Cloud Run</span>
+            <span class="tag">Cloud Scheduler</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience ────────────────────────────── -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Data Engineer &amp; BI Developer</h3>
+                <span class="tc-company">Basal Analytics</span>
+              </div>
+              <span class="tc-date">Oct 2025 – Present</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Engineered a metadata-driven incremental ETL pipeline in <strong>Azure Data Factory</strong> (on-prem SQL Server → Azure SQL MI, 1,300+ tables) for <strong>ECA</strong>, replacing per-table looping with set-based SQL and row-hash change detection — enabling true incremental sync without native CDC.</li>
+              <li>Engineered and managed end-to-end data pipelines for <strong>ND Global Consultancy</strong>, enabling seamless ingestion of JSON-based data from MongoDB into Microsoft Fabric. Designed and implemented a scalable <strong>Medallion Architecture (Bronze, Silver, Gold)</strong> using Fabric Notebooks (Spark-Python) and T-SQL, ensuring structured data transformation, strong data lineage, and enterprise-grade analytics readiness across the organization.</li>
+              <li>Designed and developed data pipelines within <strong>Microsoft Fabric Data Factory</strong> using multiple ingestion approaches, including data mirroring and custom ingestion frameworks built in Fabric Notebooks using Python. Implemented multi-stage transformation workflows and optimized pipeline execution to prevent capacity overload, minimize failures, and ensure consistent, reliable data processing at scale.</li>
+              <li>Built and optimized curated <strong>Gold-layer flat tables using T-SQL</strong> to support high-performance Power BI dashboards. Focused on scalable schema design, standardized KPI definitions, and clean, business-ready datasets, enabling accurate reporting and faster decision-making for stakeholders across functions.</li>
+              <li>Worked extensively across multi-platform data ecosystems, including SSMS, GCP, GCS, BigQuery, and Microsoft Fabric. Improved data quality, pipeline reliability, and performance through optimization techniques, reducing latency and enhancing the efficiency of end-to-end data workflows.</li>
+              <li>Developed and maintained data ingestion frameworks on <strong>Google Cloud Platform (GCP)</strong>, integrating multiple external data sources such as Shopify, ShipBob, ShipStation, TikTok, and Amazon through CI/CD-enabled pipelines. Built automated workflows using Cloud Functions and Google Scheduler to ingest and store data in <strong>Google Cloud Storage (GCS)</strong> on a daily basis.</li>
+              <li>Designed downstream data processing pipelines to transfer and load data from <strong>GCS into BigQuery</strong> using parquet-based structured storage. Implemented transformation layers using <strong>Dataform</strong>, organizing datasets into Silver and Gold layers to support analytics use cases. Ensured automated, reliable daily execution of pipelines, maintaining data consistency and availability for reporting and BI applications.</li>
+              <li>Collaborated closely with cross-functional stakeholders — including business, analytics, and engineering teams — to align data engineering solutions with reporting requirements and organizational goals. Contributed to building scalable, future-ready data infrastructure that supports continuous growth and data-driven decision-making.</li>
+            </ul>
+            <div class="tc-tags">
+              <span class="tag tag-sm">Microsoft Fabric</span><span class="tag tag-sm">MongoDB</span>
+              <span class="tag tag-sm">Medallion Architecture</span><span class="tag tag-sm">T-SQL</span>
+              <span class="tag tag-sm">BigQuery</span><span class="tag tag-sm">GCP</span>
+              <span class="tag tag-sm">Dataform</span><span class="tag tag-sm">Cloud Functions</span>
+              <span class="tag tag-sm">Power BI</span><span class="tag tag-sm">CI/CD</span>
+              <span class="tag tag-sm">Git Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Executive </h3>
+                <span class="tc-company">IIT Kanpur Development Foundation</span>
+              </div>
+              <span class="tc-date">Feb 2025 – Sep 2025</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Improved operational efficiency by <strong>~20%</strong> via alumni prospecting dataset optimisation.</li>
+              <li>Built Power BI &amp; Looker Studio dashboards for stakeholder decision-making.</li>
+              <li>Designed end-to-end alumni donation pipeline enabling targeted donor outreach.</li>
+              <li>Cleansed &amp; enriched Zoho CRM data, improving downstream analytics reliability.</li>
+            </ul>
+            <div class="tc-tags">
+              <span class="tag tag-sm">Power BI</span><span class="tag tag-sm">Looker Studio</span>
+              <span class="tag tag-sm">Zoho CRM</span><span class="tag tag-sm">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Data Analyst Intern</h3>
+                <span class="tc-company">Mensa Brands</span>
+              </div>
+              <span class="tc-date">Sep 2024 – Feb 2025</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Led end-to-end inventory allocation operations for beauty, personal care, and fashion brands across domestic online B2B channels, improving supply chain efficiency by <strong>7%</strong> through DRR-based planning, demand forecasting, and cross-functional coordination.</li>
+              <li>Analyzed sales trends and purchase order data to drive data-backed inventory decisions, optimizing stock levels to align with demand while reducing overstocking and stock imbalances across categories.</li>
+              <li>Executed PO fulfillment and replenishment planning for key platforms including Amazon, Myntra, Flipkart, Zepto, Blinkit, and other quick commerce partners, ensuring timely dispatches and consistent product availability.</li>
+              <li>Monitored inventory across e-commerce platforms and strategically allocated stock to minimize overstocking at partner warehouses while improving overall inventory efficiency.</li>
+              <li>Coordinated inter-warehouse stock transfers to address inventory shortages, balance stock across locations, and sustain a fulfillment rate above <strong>90%</strong> through uninterrupted order processing.</li>
+            </ul>
+            <div class="tc-tags">
+              <span class="tag tag-sm">SQL</span><span class="tag tag-sm">Excel</span>
+              <span class="tag tag-sm">Supply Chain Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Analyst <span class="tc-part">(Part Time)</span></h3>
+                <span class="tc-company">Puma</span>
+              </div>
+              <span class="tc-date">Dec 2019 – Jan 2022</span>
+            </div>
+            <ul class="tc-bullets">
+              <li>Led daily store operations and tracked KPIs (sales, ATV, conversion), enabling the team to consistently achieve <strong>100%</strong> of sales targets through strategic customer engagement and seasonally aligned merchandising.</li>
+              <li>Managed inventory by analyzing fast- and slow-moving products, ensuring high-demand availability while reducing stockouts during peak periods.</li>
+              <li>Built partnerships with gym managers and onboarded them to Puma's discount programs, driving a <strong>5%</strong> increase in performance-category sales and expanding brand reach.</li>
+              <li>Streamlined inventory by coordinating with the audit team to remove off-season, aged, and non-moving stock, improving turnover and maintaining a lean, sale-ready assortment.</li>
+            </ul>
+            <div class="tc-tags">
+              <span class="tag tag-sm">KPI Analysis</span><span class="tag tag-sm">Sales Analytics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ──────────────────────────────── -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <span class="project-icon">🎬</span>
+            <div class="project-links-row">
+              <a href="https://github.com/Neerajshah1008/Netflix-Business-Case" target="_blank" rel="noopener" class="project-link-icon" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.18c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.41-1.3.75-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://github.com/Neerajshah1008/Netflix-Business-Case" target="_blank" rel="noopener" class="project-link-icon" title="Live">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Netflix Content Strategy — Business Case EDA</h3>
+          <p>Performed end-to-end EDA on 8,807 Netflix titles across 749 countries to uncover content trends, rating distributions, and geographic gaps. Delivered strategic recommendations covering family content expansion, talent collaboration, and growth markets in Southeast Asia, Africa &amp; Latin America.</p>
+          <div class="tags">
+            <span class="tag tag-sm">Python</span>
+            <span class="tag tag-sm">EDA</span>
+            <span class="tag tag-sm">Pandas</span>
+            <span class="tag tag-sm">Seaborn</span>
+            <span class="tag tag-sm">Business Analysis</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <span class="project-icon">☁️</span>
+            <div class="project-links-row">
+              <a href="https://github.com/Neerajshah1008/Shopify_CICD" target="_blank" rel="noopener" class="project-link-icon" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.18c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.41-1.3.75-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://github.com/Neerajshah1008/Shopify_CICD" target="_blank" rel="noopener" class="project-link-icon" title="Live">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Shopify → GCS Automated Ingestion Pipeline (CI/CD)</h3>
+          <p>Production-grade data pipeline that extracts orders, products, customers, inventory &amp; more from the Shopify Admin REST API and lands them as Hive-partitioned Parquet files in GCS (Bronze layer). Runs as a scheduled Cloud Run Job — built and redeployed automatically on every push via GitHub Actions CI/CD. Supports both daily incremental loads and full historical backfills with cursor-based pagination and rate-limit handling.</p>
+          <div class="tags">
+            <span class="tag tag-sm">Python</span>
+            <span class="tag tag-sm">GCP</span>
+            <span class="tag tag-sm">Cloud Run</span>
+            <span class="tag tag-sm">GitHub Actions</span>
+            <span class="tag tag-sm">Shopify API</span>
+            <span class="tag tag-sm">Parquet</span>
+            <span class="tag tag-sm">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="project-card project-card--more reveal">
+          <a href="https://github.com/Neerajshah1008" target="_blank" rel="noopener" class="more-projects-link">
+            <div class="more-projects-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.18c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.41-1.3.75-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <h3>More Projects on GitHub</h3>
+            <p>Explore additional data engineering, analytics, and pipeline projects on my GitHub profile.</p>
+            <span class="more-projects-cta">View All Projects &rarr;</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Certifications ──────────────────────────── -->
+  <section id="certifications" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Certifications</h2>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal">
+          <a href="https://www.linkedin.com/learning/certificates/6cdf2e3005b1b6e7e8da238c6203ff2cd5fd6a59807f6335b4a1f0f46cd9aeb2" target="_blank" rel="noopener" class="cert-img-wrap">
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQGGzdTlGoOxvQ/feedshare-shrink_1280/B56Zy3HeFdKUAc-/0/1772598714982?e=2147483647&v=beta&t=yERVATYp4aJKB64Ti-egzgbCnZB3UEfWpiG9gQbgB0s" alt="Snowflake Certificate" class="cert-img" loading="lazy" />
+          </a>
+          <div class="cert-body">
+            <div class="cert-header">
+              <div class="cert-issuer-logo">in</div>
+              <span class="cert-issuer">LinkedIn Learning</span>
+            </div>
+            <h3 class="cert-name">Intro to Snowflake for Devs, Data Scientists &amp; Data Engineers</h3>
+            <p class="cert-meta">Issued by <strong>Snowflake, Inc.</strong> &nbsp;·&nbsp; March 2026</p>
+            <div class="cert-tags">
+              <span class="tag tag-sm">Snowflake</span>
+              <span class="tag tag-sm">Data Engineering</span>
+            </div>
+            <a href="https://www.linkedin.com/learning/certificates/6cdf2e3005b1b6e7e8da238c6203ff2cd5fd6a59807f6335b4a1f0f46cd9aeb2" target="_blank" rel="noopener" class="cert-link">View Certificate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <a href="https://www.linkedin.com/learning/certificates/6e9acfbb604bfba2cc1a113cf6b0025f040f5c7a3027a24750ed9610b08abb90" target="_blank" rel="noopener" class="cert-img-wrap">
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQEFxN4tysToMw/feedshare-shrink_1280/B56ZxzlihHJAAc-/0/1771465746755?e=2147483647&v=beta&t=9_pZS42F-98R4-z_qz4_GEaanxw5fUEumcqvS7vQCIw" alt="Microsoft Fabric DP-700 Certificate" class="cert-img" loading="lazy" />
+          </a>
+          <div class="cert-body">
+            <div class="cert-header">
+              <div class="cert-issuer-logo">in</div>
+              <span class="cert-issuer">LinkedIn Learning</span>
+            </div>
+            <h3 class="cert-name">Implementing Data Engineering Solutions Using Microsoft Fabric (DP-700) Cert Prep</h3>
+            <p class="cert-meta">Issued by <strong>Microsoft Press</strong> &nbsp;·&nbsp; February 2026</p>
+            <div class="cert-tags">
+              <span class="tag tag-sm">Microsoft Fabric</span>
+              <span class="tag tag-sm">DP-700</span>
+              <span class="tag tag-sm">Data Engineering</span>
+            </div>
+            <a href="https://www.linkedin.com/learning/certificates/6e9acfbb604bfba2cc1a113cf6b0025f040f5c7a3027a24750ed9610b08abb90" target="_blank" rel="noopener" class="cert-link">View Certificate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <a href="https://www.linkedin.com/learning/certificates/2ffeea18df237b952021541550e2ee6ccb49dde893563c450c23d7461010e370" target="_blank" rel="noopener" class="cert-img-wrap">
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQFQCRSa2GgSRQ/feedshare-shrink_1280/B56ZwaWDSqJoAc-/0/1769968514443?e=2147483647&v=beta&t=LcSWCP1lEitVenHpeu-AEH9hZHhtmEzQR-5gUYLEsLI" alt="LinkedIn Learning Certificate" class="cert-img" loading="lazy" />
+          </a>
+          <div class="cert-body">
+            <div class="cert-header">
+              <div class="cert-issuer-logo">in</div>
+              <span class="cert-issuer">LinkedIn Learning</span>
+            </div>
+            <h3 class="cert-name">LinkedIn Learning Certificate</h3>
+            <p class="cert-meta">February 2026</p>
+            <div class="cert-tags">
+              <span class="tag tag-sm">Data Engineering</span>
+            </div>
+            <a href="https://www.linkedin.com/learning/certificates/2ffeea18df237b952021541550e2ee6ccb49dde893563c450c23d7461010e370" target="_blank" rel="noopener" class="cert-link">View Certificate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-body" style="padding:1.6rem;">
+            <div class="cert-header">
+              <div class="cert-issuer-logo cert-issuer-logo--hr">HR</div>
+              <span class="cert-issuer">HackerRank</span>
+            </div>
+            <h3 class="cert-name">SQL (Intermediate)</h3>
+            <p class="cert-meta"><strong>Verified</strong> &nbsp;·&nbsp; Complex joins, unions &amp; sub-queries</p>
+            <div class="cert-tags">
+              <span class="tag tag-sm">SQL</span>
+              <span class="tag tag-sm">Data Analysis</span>
+            </div>
+            <a href="https://www.hackerrank.com/certificates/d68c9a186881" target="_blank" rel="noopener" class="cert-link">View Certificate &rarr;</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-body" style="padding:1.6rem;">
+            <div class="cert-header">
+              <div class="cert-issuer-logo cert-issuer-logo--hr">HR</div>
+              <span class="cert-issuer">HackerRank</span>
+            </div>
+            <h3 class="cert-name">Python (Basic)</h3>
+            <p class="cert-meta"><strong>Verified</strong> &nbsp;·&nbsp; Scalars, control flow, collections, OOP &amp; modularity</p>
+            <div class="cert-tags">
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">Programming</span>
+            </div>
+            <a href="https://www.hackerrank.com/certificates/decc0a4f6d85" target="_blank" rel="noopener" class="cert-link">View Certificate &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Education ──────────────────────────────── -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Education</h2>
+      <div class="education-grid">
+
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
+            <span class="edu-institution">Kashmir University</span>
+            <span class="edu-year">Graduated 2021</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ───────────────────────────────── -->
+  <section id="contact" class="section">
+    <div class="container contact-container">
+      <h2 class="section-title reveal">Let's Connect</h2>
+      <p class="contact-sub reveal">
+        Open to <strong>Data Engineer</strong> &amp; <strong>BI Developer</strong> roles —
+        India-based, remote, or international. Let's build something great.
+      </p>
+      <div class="contact-grid reveal">
+        <a href="mailto:neerajshah.work@gmail.com" class="contact-card">
+          <div class="cc-icon">✉</div>
+          <div>
+            <span class="cc-label">Email</span>
+            <span class="cc-value">neerajshah.work@gmail.com</span>
+          </div>
+        </a>
+        <a href="tel:+917006230647" class="contact-card">
+          <div class="cc-icon">📞</div>
+          <div>
+            <span class="cc-label">Phone</span>
+            <span class="cc-value">+91-7006230647</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/neeraj-kumar-78927036a" target="_blank" rel="noopener" class="contact-card">
+          <div class="cc-icon">💼</div>
+          <div>
+            <span class="cc-label">LinkedIn</span>
+            <span class="cc-value">Connect with me</span>
+          </div>
+        </a>
+        <a href="https://github.com/Neerajshah1008" target="_blank" rel="noopener" class="contact-card">
+          <div class="cc-icon">🐙</div>
+          <div>
+            <span class="cc-label">GitHub</span>
+            <span class="cc-value">View my Projects</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────── -->
+  <footer class="footer">
+    <p>Designed &amp; built by <strong>Neeraj Kumar</strong> &nbsp;·&nbsp; Data Engineer &amp; BI Developer</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

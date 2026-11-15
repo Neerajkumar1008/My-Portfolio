@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
+  <!-- Rocket pointing upper-right (nose ~45,11), flame lower-left -->
+  <g transform="translate(28,28) rotate(-45) translate(-14,-22)">
+
+    <!-- Flame outer -->
+    <ellipse cx="14" cy="52" rx="7"  ry="5"   fill="#e06010" opacity="0.95"/>
+    <!-- Flame mid -->
+    <ellipse cx="14" cy="51" rx="4.5" ry="3.5" fill="#f5a010"/>
+    <!-- Flame core -->
+    <ellipse cx="14" cy="50" rx="2.5" ry="2"   fill="#ffe040"/>
+
+    <!-- Left fin -->
+    <path d="M6 30 L-2 44 L9 39 Z" fill="#c24214"/>
+    <!-- Right fin -->
+    <path d="M22 30 L30 44 L19 39 Z" fill="#c24214"/>
+    <!-- Center bottom fin -->
+    <path d="M11 38 L14 47 L17 38 Z" fill="#d4530d" opacity="0.85"/>
+
+    <!-- Body -->
+    <rect x="6" y="16" width="16" height="22" rx="3" fill="#6ea8bf"/>
+    <!-- Body left highlight -->
+    <rect x="7" y="16" width="5"  height="22" rx="2" fill="#8ec4d8" opacity="0.45"/>
+
+    <!-- Blue accent band -->
+    <rect x="6" y="35" width="16" height="4" rx="1" fill="#2563eb" opacity="0.9"/>
+
+    <!-- Window frame -->
+    <rect x="8" y="19" width="12" height="10" rx="4" fill="#e07a10"/>
+    <!-- Window inner -->
+    <rect x="9"  y="20" width="10" height="8"  rx="3" fill="#f8c060" opacity="0.9"/>
+    <!-- Window shine -->
+    <ellipse cx="12" cy="22" rx="2.5" ry="1.5" fill="white" opacity="0.35"/>
+
+    <!-- Nose cone -->
+    <path d="M14 0 C7 5 5 11 5 16 L23 16 C23 11 21 5 14 0 Z" fill="#7bbacf"/>
+    <!-- Nose highlight -->
+    <path d="M14 1 C8 5 7 10 7 14 L11 14 C10 10 11 6 14 2 Z" fill="#9dd0e4" opacity="0.5"/>
+    <!-- Nose tip -->
+    <circle cx="14" cy="1" r="1.5" fill="#9dd0e4" opacity="0.7"/>
+
+  </g>
+</svg>
