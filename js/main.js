@@ -365,7 +365,7 @@
     submit.disabled = true;
     submit.textContent = 'Sending…';
     const timeout = new AbortController();
-    const timeoutId = setTimeout(() => timeout.abort(), 30000);
+    const timeoutId = setTimeout(() => timeout.abort(), 60000);
     try {
       const res = await fetch(ENDPOINT, {
         method: 'POST',
