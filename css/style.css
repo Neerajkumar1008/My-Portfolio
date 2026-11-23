@@ -1127,6 +1127,11 @@ button.contact-card {
   outline: none;
   border-color: var(--primary);
 }
+#msgForm input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text);
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-alt) inset;
+  caret-color: var(--text);
+}
 
 .msg-honey { display: none !important; }
 

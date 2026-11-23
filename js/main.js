@@ -364,9 +364,12 @@
 
     submit.disabled = true;
     submit.textContent = 'Sending…';
+    const timeout = new AbortController();
+    const timeoutId = setTimeout(() => timeout.abort(), 30000);
     try {
       const res = await fetch(ENDPOINT, {
         method: 'POST',
+        signal: timeout.signal,
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           _subject: 'New message from your portfolio',
@@ -379,14 +382,20 @@
         }),
       });
       const json = await res.json().catch(() => ({}));
-      if (!res.ok || String(json.success) === 'false') throw new Error(json.message);
+      if (!res.ok || String(json.success) === 'false') {
+        errorEl.textContent = json.message || 'Could not send right now. Please email me directly instead.';
+        return;
+      }
 
       form.hidden = true;
       sent.hidden = false;
       closeTimer = setTimeout(close, 2500);
-    } catch {
-      errorEl.textContent = 'Could not send right now. Please email me directly instead.';
+    } catch (err) {
+      errorEl.textContent = err.name === 'AbortError'
+        ? 'The server is taking too long. Please try again in a moment.'
+        : 'Could not send right now. Please email me directly instead.';
     } finally {
+      clearTimeout(timeoutId);
       submit.disabled = false;
       submit.textContent = 'Send Message';
     }
