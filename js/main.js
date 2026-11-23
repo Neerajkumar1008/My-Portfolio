@@ -306,3 +306,89 @@
     a.addEventListener('click', () => linksList.classList.remove('open'));
   });
 })();
+
+/* ── Message Me popup ─────────────────────────── */
+(() => {
+  const ENDPOINT = 'https://formsubmit.co/ajax/neerajshah.work@gmail.com';
+
+  const overlay = document.getElementById('msgOverlay');
+  const openBtn = document.getElementById('openMsg');
+  if (!overlay || !openBtn) return;
+  const closeBtn = document.getElementById('closeMsg');
+  const form     = document.getElementById('msgForm');
+  const sent     = document.getElementById('msgSent');
+  const errorEl  = document.getElementById('msgError');
+  const submit   = form.querySelector('.msg-submit');
+  let closeTimer;
+
+  function open() {
+    clearTimeout(closeTimer);
+    form.reset();
+    errorEl.textContent = '';
+    form.hidden = false;
+    sent.hidden = true;
+    overlay.hidden = false;
+    requestAnimationFrame(() => overlay.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+    form.querySelector('input').focus();
+  }
+
+  function close() {
+    clearTimeout(closeTimer);
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => { overlay.hidden = true; }, 250);
+    openBtn.focus();
+  }
+
+  openBtn.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !overlay.hidden) close();
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    errorEl.textContent = '';
+
+    const data = Object.fromEntries(new FormData(form));
+    if (data._honey) return;
+    if (!form.checkValidity()) {
+      const bad = form.querySelector(':invalid');
+      const field = bad.closest('label').firstChild.textContent.trim();
+      errorEl.textContent = `Please enter a valid ${field.toLowerCase()}.`;
+      bad.focus();
+      return;
+    }
+
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New message from your portfolio',
+          _template: 'table',
+          _captcha: 'false',
+          _replyto: data.email,
+          Email: data.email,
+          Mobile: data.mobile,
+          Message: data.message,
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || String(json.success) === 'false') throw new Error(json.message);
+
+      form.hidden = true;
+      sent.hidden = false;
+      closeTimer = setTimeout(close, 2500);
+    } catch {
+      errorEl.textContent = 'Could not send right now. Please email me directly instead.';
+    } finally {
+      submit.disabled = false;
+      submit.textContent = 'Send Message';
+    }
+  });
+})();
